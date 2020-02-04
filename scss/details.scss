@@ -1,0 +1,60 @@
+@import './variables/_colors';
+
+.book-container {
+  background-color: $white;
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  height: 416px;
+  width: 900px;
+}
+
+.book-cover {
+  height: 368px;
+  margin: 24px;
+  width: 261px;
+}
+
+.book-detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 24px 0px 0px 24px;
+  height: 226px;
+}
+
+.book-title,
+.book-description,
+.book-title-genre,
+.book-detail {
+  font-family: 'Roboto';
+}
+
+.book-title {
+  font-size: 32px;
+  font-weight: 700;
+  &::before {
+    content: '';
+    height: 4px;
+    display: block;
+    width: 540px;
+    background-color: $light-green;
+    position: relative;
+    top: 51px;
+  }
+}
+
+.book-description {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.book-title-genre {
+  color: $light-grey;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.book-detail {
+  color: $light-grey;
+  font-size: 20px;
+}
