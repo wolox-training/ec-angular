@@ -6,6 +6,7 @@
   display: flex;
   height: 416px;
   width: 900px;
+  max-width: 100%;
 }
 
 .book-cover {
@@ -22,24 +23,23 @@
   height: 226px;
 }
 
-.book-title,
-.book-description,
-.book-title-genre,
-.book-detail {
+* {
   font-family: 'Roboto';
 }
 
 .book-title {
   font-size: 32px;
   font-weight: 700;
+
   &::before {
-    content: '';
-    height: 4px;
-    display: block;
-    width: 540px;
     background-color: $light-green;
+    content: '';
+    display: block;
+    height: 4px;
+    max-width: 100%;
     position: relative;
     top: 51px;
+    width: 540px;
   }
 }
 
