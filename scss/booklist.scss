@@ -1,0 +1,41 @@
+@import './variables/_colors';
+
+.books-container {
+  background-color: $white-smoke;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 106px 197px 0px;
+}
+
+.book-cover-presentation {
+  height: 200px;
+  width: 142px;
+}
+
+.book-detail-presentation {
+  color: $light-grey;
+  font-size: 14px;
+}
+
+.book-presentation {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.book-presentation-container {
+  background-color: white;
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  margin: 0px 18px 36px;
+  height: 300px;
+  width: 198px;
+}
+
+.book-title-presentation {
+  font-size: 16px;
+  font-weight: 700;
+}
