@@ -1,0 +1,23 @@
+@import './variables/_colors';
+
+.wolox-nav-container {
+  align-items: center;
+  background-color: $white;
+  border-top: 6px solid $sky-blue;
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.wolox-nav-logo {
+  height: 70px;
+  width: 210px;
+}
+
+.wolox-nav-logout {
+  font-size: 18px;
+}
