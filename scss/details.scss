@@ -1,41 +1,33 @@
-@import './variables/_colors';
+@import './variables/_colors', './variables/_variables';
 
 * {
   font-family: 'Roboto';
-}
-
-.badge {
-  height: 120px;
-  left: 225px;
-  position: absolute;
-  transform: rotate(15deg);
-  width: 95px;
 }
 
 .book-container {
   background-color: $white;
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
   display: flex;
-  height: 415px;
-  width: 900px;
+  height: $book-container-height;
+  width: $book-container-width;
   max-width: 100%;
 
   &::before {
     background: url('assets/badge.png');
     background-size: 100% 100%;
     content: '';
-    height: 120px;
+    height: $badge-height;
     left: 225px;
     position: absolute;
     transform: rotate(15deg);
-    width: 95px;
+    width: $badge-width;
   }
 }
 
 .book-cover {
-  height: 365px;
+  height: $book-cover-height;
   margin: 24px;
-  width: 260px;
+  width: $book-cover-width;
 }
 
 .book-detail-container {
@@ -47,7 +39,7 @@
 }
 
 .book-title {
-  font-size: 32px;
+  font-size: $book-detail-font-size + 12px;
   font-weight: 700;
 
   &::before {
@@ -63,17 +55,17 @@
 }
 
 .book-description {
-  font-size: 20px;
+  font-size: $book-detail-font-size;
   font-weight: 700;
 }
 
 .book-title-genre {
   color: $light-grey;
-  font-size: 24px;
+  font-size: $book-detail-font-size + 4px;
   font-weight: 700;
 }
 
 .book-detail {
   color: $light-grey;
-  font-size: 20px;
+  font-size: $book-detail-font-size;
 }
