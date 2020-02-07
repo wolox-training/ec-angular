@@ -12,11 +12,38 @@
   width: 95px;
 }
 
+.back-home {
+  align-self: flex-start;
+  font-size: 18px;
+  margin: 0px 0px 50px 150px;
+  position: relative;
+
+  &::before {
+    background: url('assets/back-arrow.png') no-repeat;
+    content: '';
+    height: 20px;
+    position: absolute;
+    right: 50px;
+    width: 20px;
+  }
+}
+
+.book {
+  align-items: center;
+  background-color: $white-smoke;
+  display: flex;
+  flex-direction: column;
+  height: 580px;
+  justify-content: center;
+  position: relative;
+}
+
 .book-container {
   background-color: $white;
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
   display: flex;
   height: 415px;
+  position: relative;
   width: 900px;
   max-width: 100%;
 
