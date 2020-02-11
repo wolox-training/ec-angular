@@ -25,7 +25,6 @@
   background-color: $white-smoke;
   display: flex;
   flex-direction: column;
-  height: 580px;
   justify-content: center;
   position: relative;
 }
@@ -95,4 +94,47 @@
 .book-detail {
   color: $light-grey;
   font-size: $book-detail-font-size;
+}
+
+@media only screen and (max-width: 1023px) {
+  .back-home {
+    align-self: center;
+    margin: 48px 0px 0px 0px;
+    order: 1;
+  }
+  .book-container {
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 320px;
+    &::before {
+      height: calc(#{$badge-height} * 70 / 100);
+      width: calc(#{$badge-width} * 70 / 100);
+      left: 210px;
+    }
+  }
+  .book-cover {
+    height: calc(#{$book-cover-height} * 70 / 100);
+    width: calc(#{$book-cover-width} * 70 / 100);
+  }
+  .book-detail,
+  .book-description {
+    font-size: calc(#{$book-detail-font-size} * 70 / 100);
+  }
+  .book-detail-container {
+    margin: 24px;
+    height: 200px;
+  }
+  .book-title-genre {
+    font-size: calc(#{$book-detail-font-size + 4px} * 70 / 100);
+  }
+  .book-title {
+    font-size: calc(#{$book-detail-font-size + 12px} * 70 / 100);
+
+    &::before {
+      content: '';
+      top: 40px;
+      width: 280px;
+    }
+  }
 }
