@@ -28,6 +28,10 @@
   height: $book-presentation-height;
   padding-left: calc(calc(#{$book-presentation-width} - #{$book-cover-list-width}) / 2);
   width: $book-presentation-width;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .book-title-presentation {
