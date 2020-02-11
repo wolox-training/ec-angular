@@ -1,0 +1,40 @@
+@import './variables/_colors', './variables/_variables';
+
+.books-container {
+  background-color: $white-smoke;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 106px 197px 0px;
+}
+
+.book-cover-presentation {
+  height: $book-cover-list-height;
+  width: $book-cover-list-width;
+}
+
+.book-detail-presentation {
+  color: $light-grey;
+  font-size: $book-title-presentation-size - 2px;
+}
+
+.book-presentation-container {
+  background-color: white;
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0px 18px 36px;
+  height: $book-presentation-height;
+  padding-left: calc(calc(#{$book-presentation-width} - #{$book-cover-list-width}) / 2);
+  width: $book-presentation-width;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.book-title-presentation {
+  font-size: $book-title-presentation-size;
+  font-weight: 700;
+}
