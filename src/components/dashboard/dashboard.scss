@@ -1,0 +1,94 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 135px;
+  padding-top: 145px;
+}
+
+.books-dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-column-gap: 70px;
+  grid-row-gap: 65px;
+}
+
+.book-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: $book-dashboard-container-height;
+}
+
+.book-dashboard-image {
+  background: url('../assets/default_book.svg') no-repeat center;
+  background-color: $light-gray;
+  height: $book-dashboard-image-height;
+  width: $book-dashboard-image-width;
+}
+
+.book-dashboard-title {
+  font-weight: bold;
+  font-size: $book-dashboard-title-size;
+  margin-top: 10px;
+  width: 130px;
+}
+
+.book-dashboard-author {
+  font-size: calc($book-dashboard-title-size - 2px);
+}
+
+.filter {
+  background-color: $white-smoke;
+  color: $gray;
+  font-style: italic;
+  font-size: $dashboard-search-size;
+  height: 100%;
+  padding-left: 12px;
+  width: 100%;
+}
+
+.search {
+  align-items: center;
+  background-color: $white-smoke;
+  color: $gray;
+  display: flex;
+  font-style: italic;
+  font-size: $dashboard-search-size;
+  padding-left: 12px;
+  height: $dashboard-search-element-height;
+  width: $dashboard-search-element-width;
+}
+
+.search-submit {
+  background: url('../assets/search.svg') no-repeat center;
+  background-color: $wolox-green;
+  height: $dashboard-search-submit-height;
+  width: $dashboard-search-submit-width;
+}
+
+.search-options {
+  display: flex;
+  margin-bottom: 65px;
+  width: 100%;
+}
+
+.select-wrapper {
+  height: $dashboard-search-element-height;
+  margin-right: 30px;
+  position: relative;
+  width: $dashboard-search-element-width;
+
+  &::after {
+    content: '';
+    border-style: solid;
+    border-width: 13px 7.5px 0 7.5px;
+    border-color: $gray transparent transparent transparent;
+    display: inline-block;
+    height: 0;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    width: 0;
+  }
+}

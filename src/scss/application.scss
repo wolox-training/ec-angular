@@ -1,0 +1,18 @@
+@import './equalizer';
+
+@import 'variables/colors';
+
+@import 'variables/variables';
+
+@import 'base';
+
+@import '../components/dashboard/dashboard';
+
+* {
+  font-family: 'Roboto';
+}
+
+html,
+body {
+  height: 100%;
+}

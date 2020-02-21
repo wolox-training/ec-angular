@@ -1,0 +1,13 @@
+div.dashboard
+  div.search-options
+    div.select-wrapper
+      select.filter(ng-model="vm.filter.type")
+        option(disabled selected value="") Seleccionar filtro
+        option(ng-repeat="type in vm.filterTypes" ng-value="type.id") {{type.name}}
+    input.search(type="text" placeholder="Buscar..." ng-model="vm.filter.name")
+    button.search-submit(ng-click="vm.filterData()")
+  div.books-dashboard-container
+    div.book-dashboard-container(ng-repeat="book in vm.filteredBooks")
+      img.book-dashboard-image(ng-src="{{book.image_url}}")
+      span.book-dashboard-title {{book.title}}
+      span.book-dashboard-author {{book.author}}

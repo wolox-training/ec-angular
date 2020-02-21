@@ -1,0 +1,66 @@
+@import './variables/_colors', './variables/_variables';
+
+.login {
+  align-items: center;
+  background-color: $white;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.login-container {
+  align-items: center;
+  background-color: $white-smoke;
+  border-top: 8px solid $sky-blue;
+  display: flex;
+  flex-direction: column;
+  height: $login-container-height;
+  width: $login-container-width;
+
+  &::before {
+    background-color: $dark-grey;
+    content: '';
+    height: 2px;
+    position: relative;
+    top: 333px;
+    width: 252px;
+  }
+}
+
+.login-label {
+  font-size: 16px;
+}
+
+.login-input {
+  height: $login-items-height;
+  width: $login-items-width;
+}
+
+.login-submit-button {
+  background-color: $light-green;
+  border-radius: 5px;
+  color: $white;
+  height: $login-items-height;
+  width: $login-items-width;
+}
+
+.login-signup-button {
+  background-color: $white-smoke;
+  border-radius: 5px;
+  color: $light-green;
+  height: $login-items-height;
+  width: $login-items-width;
+  border: 2px solid $light-green;
+}
+
+.form-container {
+  justify-content: space-around;
+  display: flex;
+  height: 320px;
+  flex-direction: column;
+}
+
+.wolox-login-logo {
+  height: $wolox-logo-height;
+  width: $wolox-logo-width;
+}
