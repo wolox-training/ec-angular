@@ -11,7 +11,7 @@
   position: relative;
 
   &::before {
-    background: url('assets/back-arrow.png') no-repeat;
+    background-image: url('assets/back-arrow.png');
     content: '';
     height: 20px;
     position: absolute;
@@ -20,14 +20,10 @@
   }
 }
 
-.book {
-  align-items: center;
+.book-section-container {
   background-color: $white-smoke;
-  display: flex;
-  flex-direction: column;
   height: 580px;
-  justify-content: center;
-  position: relative;
+  padding-top: 40px;
 }
 
 .book-container {
@@ -37,6 +33,7 @@
   height: $book-container-height;
   position: relative;
   width: $book-container-width;
+  margin: 0 auto;
   max-width: 100%;
 
   &::before {
