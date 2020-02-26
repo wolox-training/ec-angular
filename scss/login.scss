@@ -1,0 +1,76 @@
+@import './variables/_colors', './variables/_variables';
+
+.login {
+  align-items: center;
+  background-color: $white;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.login-container {
+  align-items: center;
+  background-color: $white-smoke;
+  border-top: 8px solid $sky-blue;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: $login-container-height;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: $login-container-width;
+
+  &::before {
+    background-color: $dark-grey;
+    content: '';
+    height: 2px;
+    position: relative;
+    top: 333px;
+    width: 252px;
+  }
+}
+
+.login-label {
+  font-size: 16px;
+}
+
+%login-button {
+  height: $login-items-height;
+  width: $login-items-width;
+}
+
+.login-input {
+  @extend %login-button;
+}
+
+.login-submit-button {
+  @extend %login-button;
+
+  background-color: $light-green;
+  border-radius: 5px;
+  color: $white;
+}
+
+.login-signup-button {
+  background-color: $white-smoke;
+  border-radius: 5px;
+  color: $light-green;
+  height: $login-items-height;
+  width: $login-items-width;
+  border: 2px solid $light-green;
+}
+
+.form-container {
+  justify-content: space-around;
+  display: flex;
+  height: 320px;
+  flex-direction: column;
+}
+
+.wolox-login-logo {
+  height: $wolox-logo-height;
+  width: $wolox-logo-width;
+}

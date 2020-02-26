@@ -7,14 +7,14 @@
   box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: space-around;
-  height: $wolox-navbar-heigth;
+  height: $wolox-logo-height;
   top: 0;
   position: sticky;
   z-index: 1;
 }
 
 .wolox-nav-logo {
-  height: $wolox-navbar-heigth;
+  height: $wolox-logo-height;
   width: $wolox-logo-width;
 }
 
