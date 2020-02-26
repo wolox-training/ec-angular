@@ -12,9 +12,15 @@
   align-items: center;
   background-color: $white-smoke;
   border-top: 8px solid $sky-blue;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   height: $login-container-height;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: $login-container-width;
 
   &::before {
@@ -31,17 +37,21 @@
   font-size: 16px;
 }
 
-.login-input {
+%login-button {
   height: $login-items-height;
   width: $login-items-width;
 }
 
+.login-input {
+  @extend %login-button;
+}
+
 .login-submit-button {
+  @extend %login-button;
+
   background-color: $light-green;
   border-radius: 5px;
   color: $white;
-  height: $login-items-height;
-  width: $login-items-width;
 }
 
 .login-signup-button {
