@@ -1,17 +1,69 @@
+.book-author {
+  @extend %book-info;
+  margin-bottom: 22px;
+}
+
 .book-container {
+  border-bottom: 1px solid #00adee;
   display: flex;
+  height: 308px;
+  width: 800px;
+}
+
+.book-details-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-genre {
+  @extend %book-info;
+  margin-bottom: 13px;
 }
 
 .book-image {
   background: url('../assets/default_book.svg') no-repeat center;
   background-color: $light-gray;
   height: 272px;
+  margin-right: 21px;
   width: 191px;
 }
 
+%book-info {
+  color: $dark-gray;
+  font-size: $book-section-title - 4px;
+}
+
+.book-details {
+  color: $gray;
+  font-size: $book-section-title - 6px;
+}
+
 .book-section-container {
-  align-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
+  height: 100%;
   justify-content: center;
+}
+
+.book-rent {
+  color: $white;
+  background: #00adee;
+  font-size: $book-section-rent;
+  font-weight: bold;
+  height: 38px;
+  margin-top: 233px;
+  position: absolute;
+  width: 192px;
+}
+
+.book-title {
+  font-size: $book-section-title;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.book-year {
+  @extend %book-info;
+  margin-bottom: 8px;
 }
