@@ -2,7 +2,8 @@ div.dashboard
   div.search-options
     div.select-wrapper
       select.filter(ng-model="vm.filter.type")
-        option(disabled selected value="") Seleccionar filtro
+        option(disabled selected value="") 
+          | Seleccionar filtro
         option(ng-repeat="type in vm.filterTypes" ng-value="type.id") {{type.name}}
     input.search(type="text" placeholder="Buscar..." ng-model="vm.filter.name")
     button.search-submit(ng-click="vm.filterData()")

@@ -98,7 +98,7 @@ angular.module('app-bootstrap').component('dashboard', {
       ];
       this.filteredBooks = [...this.books];
 
-      this.filterData = function() {
+      this.filterData = () => {
         this.filteredBooks = this.books.filter(book =>
           book[this.filterTypes[this.filter.type - 1].field]
             .toLowerCase()
