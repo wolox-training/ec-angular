@@ -4,10 +4,15 @@ angular.module('app-bootstrap').config([
   '$stateProvider',
   '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
-    $stateProvider.state('home', {
-      url: '/',
-      component: 'dashboard'
-    });
+    $stateProvider
+      .state('home', {
+        url: '/',
+        component: 'dashboard'
+      })
+      .state('book', {
+        url: '/book',
+        component: 'book'
+      });
     $urlRouterProvider.otherwise('/');
   }
 ]);

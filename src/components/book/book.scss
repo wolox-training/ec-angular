@@ -1,0 +1,17 @@
+.book-container {
+  display: flex;
+}
+
+.book-image {
+  background: url('../assets/default_book.svg') no-repeat center;
+  background-color: $light-gray;
+  height: 272px;
+  width: 191px;
+}
+
+.book-section-container {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
