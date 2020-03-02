@@ -1,10 +1,7 @@
-.signup-section-container {
-  align-items: center;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  width: 100%;
+.signup-error {
+  color: $red;
+  margin-bottom: 20px;
+  margin-top: -20px;
 }
 
 .signup-form-container {
@@ -30,6 +27,15 @@
   padding-left: 10px;
   margin-bottom: 20px;
   width: $signup-input-width;
+}
+
+.signup-section-container {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 }
 
 .signup-submit {
