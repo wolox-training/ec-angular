@@ -12,6 +12,10 @@ angular.module('app-bootstrap').config([
       .state('book', {
         url: '/book',
         component: 'book'
+      })
+      .state('signup', {
+        url: '/signup',
+        component: 'signup'
       });
     $urlRouterProvider.otherwise('/');
   }
