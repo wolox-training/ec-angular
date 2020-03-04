@@ -4,11 +4,13 @@ angular.module('app-bootstrap').component('login', {
   template: require('./login.pug')(),
   controllerAs: 'vm',
   controller: [
+    '$state',
     'sessionService',
-    function(sessionService) {
+    function($state, sessionService) {
       this.user = {};
       this.login = () => {
-        sessionService.userLoggedIn(...this.user);
+        sessionService.userLoggedIn(this.user);
+        $state.transitionTo('home');
       };
     }
   ]

@@ -10,7 +10,7 @@
     label.login-label
       | Contraseña
     input.login-input(type="password" name="password" ng-model="vm.user.password" minlength="8" maxlength="52" ng-required="true")
-    span.signup-error(ng-show="login.password.$touched && !login.password") 
+    span.signup-error(ng-show="login.password.$touched && !vm.user.password") 
       | La contraseña debe tener entre 8 y 52 caracteres
 
     button.login-submit(ng-disabled="login.$invalid" ng-click="vm.login()")
