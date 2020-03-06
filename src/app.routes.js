@@ -5,12 +5,12 @@ angular.module('app-bootstrap').config([
   '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
+      .state('navbar.home', {
         url: '/',
         component: 'dashboard',
         requireLogin: true
       })
-      .state('book', {
+      .state('navbar.book', {
         url: '/book',
         component: 'book',
         requireLogin: true
@@ -24,6 +24,11 @@ angular.module('app-bootstrap').config([
         url: '/login',
         component: 'login',
         requireLogin: false
+      })
+      .state('navbar', {
+        url: '',
+        component: 'navbar',
+        abstract: true
       });
     $urlRouterProvider.otherwise('/');
   }
@@ -37,7 +42,7 @@ angular.module('app-bootstrap').run([
       if (transition.to().requireLogin && !sessionService.loginState('token')) {
         return transition.router.stateService.target('login');
       } else if (!transition.to().requireLogin && sessionService.loginState('token')) {
-        return transition.router.stateService.target('dashboard');
+        return transition.router.stateService.target('navbar.home');
       }
       // eslint-disable-next-line no-console
       console.log('Route changed, use ransition.abort(); for abort if you need', transition);

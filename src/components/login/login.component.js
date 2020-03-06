@@ -10,7 +10,7 @@ angular.module('app-bootstrap').component('login', {
       this.user = {};
       this.login = () => {
         sessionService.userLoggedIn(this.user);
-        $state.transitionTo('home');
+        $state.transitionTo('navbar.home');
       };
     }
   ]
