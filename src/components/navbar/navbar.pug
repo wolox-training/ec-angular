@@ -1,0 +1,12 @@
+nav.navbar
+  img.nav-logo(src='../../assets/wbooks_logo.svg' alt='wbooks') 
+  div.nav-items
+    img.nav-item(src='../../assets/notifications.svg' alt='notifications')
+    img.nav-item(src='../../assets/add_book.svg' alt='add_book')
+    .nav-avatar-menu
+      img.nav-avatar(src='../../assets/avatar.png' alt='avatar' ng-click="vm.changeMenuDisplay()")
+      ul(ng-class="navClass")
+        li(ng-click='vm.logout()') 
+          | Cerrar sesión
+
+ui-view

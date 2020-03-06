@@ -1,0 +1,61 @@
+.login-error {
+  color: $red;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+
+.login-form-container {
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  height: $login-form-height;
+  justify-content: center;
+  padding: 0 80px;
+  width: $login-form-width;
+}
+
+.login-label {
+  color: $dark-gray;
+  font-size: $login-label-size;
+  margin-bottom: 10px;
+}
+
+.login-input {
+  background: $white-smoke;
+  color: $nobel;
+  height: $login-input-height;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  width: $login-input-width;
+}
+
+.login-section-container {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-wbooks-logo {
+  align-self: center;
+  height: 75px;
+  margin-bottom: 20px;
+  width: 220px;
+}
+
+.login-submit {
+  align-self: center;
+  background: $wolox-blue;
+  color: $white;
+  font-size: $login-submit-font-size;
+  height: $login-submit-height;
+  margin-top: 30px;
+  width: $login-submit-width;
+
+  &:disabled {
+    background: $gray;
+    cursor: initial;
+  }
+}

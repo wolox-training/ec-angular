@@ -1,0 +1,17 @@
+.login-section-container
+  form.login-form-container(name="login")
+    img.login-wbooks-logo(src="../../assets/wbooks_logo.svg")
+    label.login-label
+      | Email
+    input.login-input(type="email" name="email" ng-model="vm.user.email" ng-required="true")
+    span.login-error(ng-show="login.email.$touched && !login.email.$valid")
+      | El email debe ser válido
+    
+    label.login-label
+      | Contraseña
+    input.login-input(type="password" name="password" ng-model="vm.user.password" minlength="8" maxlength="52" ng-required="true")
+    span.signup-error(ng-show="login.password.$touched && !vm.user.password") 
+      | La contraseña debe tener entre 8 y 52 caracteres
+
+    button.login-submit(ng-disabled="login.$invalid" ng-click="vm.login()")
+      | Ingresar

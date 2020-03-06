@@ -1,0 +1,61 @@
+.navbar {
+  align-items: center;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  height: $navbar-height;
+  justify-content: space-between;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.nav-avatar {
+  cursor: pointer;
+  height: $navbar-avatar-height;
+  margin-left: 15px;
+  width: $navbar-avatar-width;
+}
+
+.nav-avatar-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  height: 30px;
+  margin: 0 15px;
+  width: 30px;
+}
+
+.nav-items {
+  align-items: center;
+  display: flex;
+}
+
+.nav-logo {
+  height: 75px;
+  width: 220px;
+}
+
+%nav-menu-style {
+  align-items: center;
+  color: $white;
+  clip-path: polygon(0% 15%, 50% 0%, 100% 15%, 100% 100%, 0% 100%);
+  justify-content: center;
+  background: $gray;
+  height: $navbar-menu-height;
+  position: absolute;
+  right: 10px;
+  top: 75px;
+  width: $navbar-menu-width;
+  z-index: 1;
+}
+
+.nav-menu-no-display {
+  display: none;
+  @extend %nav-menu-style;
+}
+
+.nav-menu {
+  display: flex;
+  @extend %nav-menu-style;
+}
