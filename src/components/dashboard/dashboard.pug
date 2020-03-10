@@ -7,7 +7,7 @@ div.dashboard
     input.search(type="text" placeholder="Buscar..." ng-model="vm.filter.name")
     button.search-submit(ng-click="vm.filterData()")
   div.books-dashboard-container
-    div.book-dashboard-container(ng-repeat="book in vm.filteredBooks")
+    div.book-dashboard-container(ng-repeat="book in vm.filteredBooks" ng-click="vm.viewDetails(book.id)")
       img.book-dashboard-image(ng-src="{{book.image_url}}")
       span.book-dashboard-title {{book.title}}
       span.book-dashboard-author {{book.author}}

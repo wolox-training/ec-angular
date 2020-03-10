@@ -11,7 +11,7 @@ angular.module('app-bootstrap').config([
         requireLogin: true
       })
       .state('navbar.book', {
-        url: '/book',
+        url: '/book/:id',
         component: 'book',
         requireLogin: true
       })
