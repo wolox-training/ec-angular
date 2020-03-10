@@ -1,19 +1,15 @@
 const angular = require('angular');
-
+/* eslint-disable */
 angular.module('app-bootstrap').component('book', {
   template: require('./book.pug')(),
   controllerAs: 'vm',
   controller: [
-    function() {
-      this.book = {
-        id: 1,
-        author: 'Emmie Thiel',
-        title: 'Ring of Bright Water',
-        genre: 'Short story',
-        publisher: 'Butterworth-Heinemann',
-        year: '1968',
-        image_url: null
-      };
+    '$stateParams',
+    'booksServices',
+    function($stateParams, booksServices) {
+      booksServices
+        .getBooksBy({ filterName: $stateParams.id, filterField: 'id' })
+        .then(book => (this.book = book));
     }
   ]
 });

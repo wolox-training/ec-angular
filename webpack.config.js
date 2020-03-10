@@ -11,10 +11,7 @@ const glob = require('glob');
 
 const entryFiles = glob
   .sync('./src/**/*.js')
-  .reduce(
-    (entries, entryFile) => Object.assign(entries, { [path.parse(entryFile).name]: entryFile }),
-    {}
-  );
+  .reduce((entries, entryFile) => Object.assign(entries, { [path.parse(entryFile).name]: entryFile }), {});
 
 module.exports = {
   entry: {
@@ -77,12 +74,7 @@ module.exports = {
               plugins: () => [
                 require('postcss-flexbugs-fixes'),
                 autoprefixer({
-                  browsers: [
-                    '>1%',
-                    'last 4 versions',
-                    'Firefox ESR',
-                    'not ie <9'
-                  ],
+                  browsers: ['>1%', 'last 4 versions', 'Firefox ESR', 'not ie <9'],
                   flexbox: 'no-2009'
                 })
               ]
@@ -108,12 +100,7 @@ module.exports = {
               plugins: () => [
                 require('postcss-flexbugs-fixes'),
                 autoprefixer({
-                  browsers: [
-                    '>1%',
-                    'last 4 versions',
-                    'Firefox ESR',
-                    'not ie <9'
-                  ],
+                  browsers: ['>1%', 'last 4 versions', 'Firefox ESR', 'not ie <9'],
                   flexbox: 'no-2009'
                 })
               ]
